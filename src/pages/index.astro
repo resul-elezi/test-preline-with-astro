@@ -10,7 +10,83 @@ import "../styles/global.css";
 ---
 
 <Layout>
-	<HeaderNavbar />
-	<Hero />
-	<About />
+	<div class="background">
+		<span></span>
+   		<span></span>
+   		<span></span>
+   		<span></span>
+		<HeaderNavbar />
+		<Hero />
+		<About />
+	</div>
 </Layout>
+
+
+<style>
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.background span {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 20vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 15;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #dbeafe;
+    top: 29%;
+    left: 40%;
+    animation-duration: 70s;
+    animation-delay: -54s;
+    transform-origin: 12vw -23vh;
+    box-shadow: -40vmin 0 5.571862787279564vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #dbeafe;
+    top: 18%;
+    left: 76%;
+    animation-duration: 47s;
+    animation-delay: -307s;
+    transform-origin: 6vw -5vh;
+    box-shadow: -40vmin 0 5.137143392881731vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #c4b5fe;
+    top: 93%;
+    left: 47%;
+    animation-duration: 153s;
+    animation-delay: -185s;
+    transform-origin: 22vw 11vh;
+    box-shadow: -40vmin 0 5.943074665244788vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #bfdbfe;
+    top: 89%;
+    left: 78%;
+    animation-duration: 85s;
+    animation-delay: -148s;
+    transform-origin: 4vw 14vh;
+    box-shadow: 40vmin 0 5.54870952714918vmin currentColor;
+}
+
+</style>
