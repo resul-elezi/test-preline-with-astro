@@ -1,4 +1,5 @@
 ---
+// import BackgroundGradient from "../components/BackgroundGradient.astro";
 import "../styles/global.css";
 ---
 
@@ -11,21 +12,34 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body class="bg-gradient-to-r from-blue-400 to-purple-500 p-8">
-		<slot />
+	<body>
+		<div
+			aria-hidden="true"
+			class="fixed -top-96 left-1/2 transform -translate-x-1/2 pointer-events-none z-0"
+		>
+			<div
+				class="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[400px] h-[700px] rotate-[-60deg] transform -translate-x-40"
+			>
+			</div>
+			<div
+				class="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[1440px] h-[800px] rounded-full origin-top-left -rotate-12 -translate-x-60"
+			>
+			</div>
+		</div>
+
+		<div class="relative z-10">
+			<slot />
+		</div>
+		<script is:inline src="./node_modules/preline/dist/index.js"></script>
 	</body>
-	<script is:inline src="./node_modules/preline/dist/index.js"></script>
-</html>
 
-<style>
-	/* body {
-		background-image: linear-gradient(to right, #ff7e5f, #feb47b);
-	} */
+	<!-- <style>
 
-	/* html,
+	html,
 	body {
 		margin: 0 auto;
 		width: 100%;
 		height: 100%;
-	} */
-</style>
+	}
+</style> -->
+</html>
