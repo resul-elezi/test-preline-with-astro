@@ -9,7 +9,7 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Epic ERP Solutions</title>
 	</head>
 	<body>
 		<div
@@ -28,9 +28,6 @@ import "../styles/global.css";
 
 		<div class="relative z-10">
 			<slot />
-			<script>
-				import "preline/dist/preline.js";
-			</script>
 		</div>
 
 		<!-- <style>
@@ -43,4 +40,5 @@ import "../styles/global.css";
 	}
 </style> -->
 	</body>
+	<script is:inline src="./node_modules/preline/dist/index.js"></script>
 </html>
