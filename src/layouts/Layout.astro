@@ -28,8 +28,9 @@ import "../styles/global.css";
 
 		<div class="relative z-10">
 			<slot />
-			<script is:inline src="../../node_modules/preline/dist/index.js"
-			></script>
+			<script>
+				import "preline/dist/preline.js";
+			</script>
 		</div>
 
 		<!-- <style>
