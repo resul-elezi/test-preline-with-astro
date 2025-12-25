@@ -12,14 +12,24 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Epic ERP Solutions</title>
 	</head>
-	<body>
+	<body
+		class="relative min-h-screen
+	before:content-[''] before:fixed before:-top-96 before:left-1/2
+	before:w-[400px] before:h-[700px] before:bg-gradient-to-r before:from-violet-300/50
+	before:to-purple-100 before:blur-3xl before:-rotate-[60deg] before:-translate-x-40
+	before:pointer-events-none before:z-0
+	after:content-[''] after:fixed after:-top-96 after:left-1/2
+	after:w-[1440px] after:h-[800px] after:bg-gradient-to-tl after:from-blue-50
+	after:via-blue-100 after:to-blue-50 after:rounded-full after:origin-top-left
+	after:-rotate-12 after:-translate-x-60 after:blur-3xl after:pointer-events-none after:z-0"
+	>
 		<div class="background">
 			<span></span>
 			<span></span>
 			<span></span>
 			<span></span>
 		</div>
-		<div
+		<!-- <div
 			aria-hidden="true"
 			class="fixed -top-96 left-1/2 transform -translate-x-1/2 pointer-events-none z-0"
 		>
@@ -31,19 +41,10 @@ import "../styles/global.css";
 				class="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[1440px] h-[800px] rounded-full origin-top-left -rotate-12 -translate-x-60"
 			>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="relative z-10"><slot /></div>
 
-		<!-- <style>
-
-	html,
-	body {
-		margin: 0 auto;
-		width: 100%;
-		height: 100%;
-	}
-</style> -->
 		<ModalTerms />
 	</body>
 	<script is:inline src="./node_modules/preline/dist/index.js"></script>
