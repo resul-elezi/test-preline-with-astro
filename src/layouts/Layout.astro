@@ -1,5 +1,7 @@
 ---
 import ModalTerms from "../components/ModalTerms.astro";
+import Bubbles from "../components/Bubbles.astro";
+import Gradient from "../components/Gradient.astro";
 import "../styles/global.css";
 ---
 
@@ -13,98 +15,10 @@ import "../styles/global.css";
 		<title>Epic ERP Solutions</title>
 	</head>
 	<body>
-		<div class="background">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-		<!-- <div
-			aria-hidden="true"
-			class="fixed -top-96 left-1/2 transform -translate-x-1/2 pointer-events-none z-0"
-		>
-			<div
-				class="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[400px] h-[700px] rotate-[-60deg] transform -translate-x-40"
-			>
-			</div>
-			<div
-				class="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[1440px] h-[800px] rounded-full origin-top-left -rotate-12 -translate-x-60"
-			>
-			</div>
-		</div> -->
-
-		<!-- <div class="relative z-10"></div> -->
 		<slot />
 		<ModalTerms />
+		<Bubbles />
+		<Gradient />
 	</body>
 	<script is:inline src="./node_modules/preline/dist/index.js"></script>
 </html>
-
-<style>
-	@keyframes move {
-		100% {
-			transform: translate3d(0, 0, 1px) rotate(360deg);
-		}
-	}
-
-	.background {
-		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		top: 0;
-		left: 0;
-		background: #ffffff;
-		overflow: hidden;
-	}
-
-	.background span {
-		width: 20vmin;
-		height: 20vmin;
-		border-radius: 20vmin;
-		backface-visibility: hidden;
-		position: absolute;
-		animation: move;
-		animation-duration: 15;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		z-index: -100;
-	}
-
-	.background span:nth-child(0) {
-		color: #bfdbfe;
-		top: 12%;
-		left: 18%;
-		animation-duration: 152s;
-		animation-delay: -16s;
-		transform-origin: -3vw -12vh;
-		box-shadow: -40vmin 0 5.571862787279564vmin currentColor;
-	}
-	.background span:nth-child(1) {
-		color: #dbeafe;
-		top: 40%;
-		left: 92%;
-		animation-duration: 36s;
-		animation-delay: -19s;
-		transform-origin: -14vw -10vh;
-		box-shadow: 40vmin 0 5.137143392881731vmin currentColor;
-	}
-	.background span:nth-child(2) {
-		color: #c4b5fe;
-		top: 71%;
-		left: 27%;
-		animation-duration: 48s;
-		animation-delay: -79s;
-		transform-origin: 5vw -3vh;
-		box-shadow: -40vmin 0 5.943074665244788vmin currentColor;
-	}
-	.background span:nth-child(3) {
-		/* color: #a597b5; */
-		color: #cdc1e1;
-		top: 6%;
-		left: 99%;
-		animation-duration: 105s;
-		animation-delay: -58s;
-		transform-origin: 20vw 4vh;
-		box-shadow: -40vmin 0 5.54870952714918vmin currentColor;
-	}
-</style>
