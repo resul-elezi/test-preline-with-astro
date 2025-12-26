@@ -5,13 +5,13 @@ const links = document.querySelectorAll('#links-div a');
 
 
 links.forEach(link => link.addEventListener('click', () => {
-    if ('aria-expanded' === 'true') {
+    if (hamburgerBtn.ariaExpanded) {
         hamburgerBtn.click();
     }
 }))
 
 document.documentElement.addEventListener('click', () => {
-    if ('aria-expanded' === 'true') {
+    if (hamburgerBtn.ariaExpanded) {
         hamburgerBtn.click();
     }
 });
