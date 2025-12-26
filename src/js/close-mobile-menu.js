@@ -13,3 +13,9 @@ links.forEach(link => link.addEventListener('click', (e) => {
         hamburgerBtn.click();
     }
 }))
+
+document.documentElement.addEventListener('click', () => {
+    if ('aria-expanded') {
+        hamburgerBtn.click();
+    }
+});
