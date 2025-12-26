@@ -12,3 +12,8 @@ function closeMenu() {
     menu.classList.remove('open');
     menu.addEventListener('click', e => e.stopPropagation());
 }
+
+links.forEach(link => link.addEventListener('click', () => {
+    closeMenu();
+    setAriaExpandedFalse();
+}))
