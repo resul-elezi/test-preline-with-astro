@@ -25,12 +25,17 @@
             <div
                 class="md:order-2 border-b border-gray-300 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0"
             >
-                <form id="contact-form">
+                <form
+                    id="contact-form"
+                    method="post"
+                    action="/public/contact.php"
+                >
                     <div class="space-y-4">
                         <!-- Input -->
                         <div class="relative">
                             <input
                                 type="text"
+                                name="name"
                                 id="hs-tac-input-name"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
               focus:pt-6
@@ -60,6 +65,7 @@
                         <div class="relative">
                             <input
                                 type="email"
+                                name="email"
                                 id="hs-tac-input-email"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
@@ -90,6 +96,7 @@
                             <input
                                 type="text"
                                 id="hs-tac-input-company"
+                                name="company"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
                 focus:pb-2
@@ -118,6 +125,7 @@
                             <input
                                 type="text"
                                 id="hs-tac-input-phone"
+                                name="phone"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
                 focus:pb-2
@@ -145,6 +153,7 @@
                         <div class="relative">
                             <textarea
                                 id="hs-tac-message"
+                                name="message"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
                 focus:pb-2
