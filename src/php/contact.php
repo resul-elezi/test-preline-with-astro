@@ -23,14 +23,25 @@ if (!$name || !$email || !$message) {
   exit;
 }
 
+// Dummy output: log everything into one text file
+$log_entry = "===== " . date('Y-m-d H:i:s') . " =====\n";
+$log_entry .= "Name: $name\n";
+$log_entry .= "Email: $email\n";
+$log_entry .= "Company: $company\n";
+$log_entry .= "Phone: $phone\n";
+$log_entry .= "Message:\n$message\n\n";
+
+// Create or attach file
+file_put_contents("mail_log.txt", $log_entry, FILE_APPEND);
+
 // Prepare email
-$to = "info@yourdomain.com"; // <-- Use your email here
-$subject = "Contact form Message";
-$body = "Name: $name\nEmail: $email\nCompany: $company\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: $email";
+// $to = "info@yourdomain.com"; // <-- Use your email here
+// $subject = "Contact form Message";
+// $body = "Name: $name\nEmail: $email\nCompany: $company\nPhone: $phone\n\nMessage:\n$message";
+// $headers = "From: $email";
 
 // Send Mail
-mail($to, $subject, $body, $headers);
+// mail($to, $subject, $body, $headers);
 
 http_response_code(200);
 echo "OK";
