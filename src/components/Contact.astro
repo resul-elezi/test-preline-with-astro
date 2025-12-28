@@ -25,7 +25,7 @@
             <div
                 class="md:order-2 border-b border-gray-300 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0"
             >
-                <form>
+                <form id="contact-form">
                     <div class="space-y-4">
                         <!-- Input -->
                         <div class="relative">
@@ -40,6 +40,7 @@
               autofill:pt-6
               autofill:pb-2"
                                 placeholder="Name"
+                                required
                             />
                             <label
                                 for="hs-tac-input-name"
@@ -68,6 +69,7 @@
                 autofill:pt-6
                 autofill:pb-2"
                                 placeholder="Email"
+                                required
                             />
                             <label
                                 for="hs-tac-input-email"
@@ -151,6 +153,7 @@
                 autofill:pt-6
                 autofill:pb-2"
                                 placeholder="This is a textarea placeholder"
+                                required
                                 data-hs-textarea-auto-height></textarea>
                             <label
                                 for="hs-tac-message"
@@ -165,6 +168,15 @@
                             >
                         </div>
                         <!-- End Textarea -->
+                        <!-- Honeypot for Spam Protection -->
+                        <input
+                            type="text"
+                            name="website"
+                            tabindex="-1"
+                            autocomplete="off"
+                            style="display:none"
+                        />
+                        <!-- End Honeypot for Spam Protection -->
                     </div>
 
                     <div class="mt-2">
@@ -173,9 +185,9 @@
                         </p>
 
                         <p class="mt-5">
-                            <a
+                            <button
+                                type="submit"
                                 class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 font-medium text-sm text-white hover:bg-blue-700 rounded-full focus:outline-hidden transition background-color duration-300 ease-in-out"
-                                href="#"
                             >
                                 Submit
                                 <svg
@@ -192,8 +204,9 @@
                                     ><path d="M5 12h14"></path><path
                                         d="m12 5 7 7-7 7"></path></svg
                                 >
-                            </a>
+                            </button>
                         </p>
+                        <p id="status" class="text-sm"></p>
                     </div>
                 </form>
             </div>
