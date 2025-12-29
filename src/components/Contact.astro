@@ -25,12 +25,17 @@
             <div
                 class="md:order-2 border-b border-gray-300 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0"
             >
-                <form>
+                <form
+                    id="contact-form"
+                    method="post"
+                    action="/public/contact.php"
+                >
                     <div class="space-y-4">
                         <!-- Input -->
                         <div class="relative">
                             <input
                                 type="text"
+                                name="name"
                                 id="hs-tac-input-name"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
               focus:pt-6
@@ -40,6 +45,7 @@
               autofill:pt-6
               autofill:pb-2"
                                 placeholder="Name"
+                                required
                             />
                             <label
                                 for="hs-tac-input-name"
@@ -59,6 +65,7 @@
                         <div class="relative">
                             <input
                                 type="email"
+                                name="email"
                                 id="hs-tac-input-email"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
@@ -68,6 +75,7 @@
                 autofill:pt-6
                 autofill:pb-2"
                                 placeholder="Email"
+                                required
                             />
                             <label
                                 for="hs-tac-input-email"
@@ -88,6 +96,7 @@
                             <input
                                 type="text"
                                 id="hs-tac-input-company"
+                                name="company"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
                 focus:pb-2
@@ -116,6 +125,7 @@
                             <input
                                 type="text"
                                 id="hs-tac-input-phone"
+                                name="phone"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
                 focus:pb-2
@@ -143,6 +153,7 @@
                         <div class="relative">
                             <textarea
                                 id="hs-tac-message"
+                                name="message"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
                 focus:pb-2
@@ -151,6 +162,7 @@
                 autofill:pt-6
                 autofill:pb-2"
                                 placeholder="This is a textarea placeholder"
+                                required
                                 data-hs-textarea-auto-height></textarea>
                             <label
                                 for="hs-tac-message"
@@ -165,6 +177,15 @@
                             >
                         </div>
                         <!-- End Textarea -->
+                        <!-- Honeypot for Spam Protection -->
+                        <input
+                            type="text"
+                            name="website"
+                            tabindex="-1"
+                            autocomplete="off"
+                            style="display:none"
+                        />
+                        <!-- End Honeypot for Spam Protection -->
                     </div>
 
                     <div class="mt-2">
@@ -173,9 +194,9 @@
                         </p>
 
                         <p class="mt-5">
-                            <a
+                            <button
+                                type="submit"
                                 class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 font-medium text-sm text-white hover:bg-blue-700 rounded-full focus:outline-hidden transition background-color duration-300 ease-in-out"
-                                href="#"
                             >
                                 Submit
                                 <svg
@@ -192,8 +213,9 @@
                                     ><path d="M5 12h14"></path><path
                                         d="m12 5 7 7-7 7"></path></svg
                                 >
-                            </a>
+                            </button>
                         </p>
+                        <p id="status" class="text-sm"></p>
                     </div>
                 </form>
             </div>
