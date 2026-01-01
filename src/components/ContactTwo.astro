@@ -201,7 +201,7 @@
                   peer-not-placeholder-shown:text-xs
                   peer-not-placeholder-shown:-translate-y-1.5
                   peer-not-placeholder-shown:text-neutral-400"
-                                >Tell us about your project *</label
+                                >Tell us about your inquiry *</label
                             >
                             <div
                                 class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
@@ -348,8 +348,9 @@
                     .then(async (response) => {
                         let json = await response.json();
                         if (response.status == 200) {
-                            result.classList.add("text-green-500");
-                            result.innerHTML = json.message;
+                            // result.classList.add("text-green-500");
+                            // result.innerHTML = json.message;
+                            result.innerHTML = ``;
                         } else {
                             console.log(response);
                             result.classList.add("text-red-500");
