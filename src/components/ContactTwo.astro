@@ -72,6 +72,11 @@
                   peer-not-placeholder-shown:text-neutral-400"
                                 >Name *</label
                             >
+                            <div
+                                class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                            >
+                                Please provide your full name.
+                            </div>
                         </div>
                         <!-- End Input -->
 
@@ -80,7 +85,7 @@
                             <input
                                 type="email"
                                 name="email"
-                                id="hs-tac-input-email"
+                                id="email_address"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
                 focus:pb-2
@@ -92,7 +97,7 @@
                                 required
                             />
                             <label
-                                for="hs-tac-input-email"
+                                for="email_address"
                                 class="absolute top-0 start-0 p-3 sm:p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                   peer-focus:text-xs
                   peer-focus:-translate-y-1.5
@@ -102,6 +107,16 @@
                   peer-not-placeholder-shown:text-neutral-400"
                                 >Email *</label
                             >
+                            <div
+                                class="empty-feedback text-red-400 text-sm mt-1"
+                            >
+                                Please provide your email address.
+                            </div>
+                            <div
+                                class="invalid-feedback text-red-400 text-sm mt-1"
+                            >
+                                Please provide a valid email address.
+                            </div>
                         </div>
                         <!-- End Input -->
 
@@ -166,7 +181,6 @@
                         <!-- Textarea -->
                         <div class="relative">
                             <textarea
-                                id="hs-tac-message"
                                 name="message"
                                 class="peer p-3 sm:p-4 block w-full border border-gray-300 rounded-lg sm:text-sm placeholder:text-transparent focus:border-blue-300 focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
                 focus:pt-6
@@ -179,7 +193,7 @@
                                 required
                                 data-hs-textarea-auto-height></textarea>
                             <label
-                                for="hs-tac-message"
+                                for="message"
                                 class="absolute top-0 start-0 p-3 sm:p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                   peer-focus:text-xs
                   peer-focus:-translate-y-1.5
@@ -189,6 +203,11 @@
                   peer-not-placeholder-shown:text-neutral-400"
                                 >Tell us about your project *</label
                             >
+                            <div
+                                class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                            >
+                                Please enter your message.
+                            </div>
                         </div>
                         <!-- End Textarea -->
                         <!-- Honeypot for Spam Protection -->
