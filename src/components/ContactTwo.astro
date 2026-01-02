@@ -229,7 +229,7 @@
                             <!-- Toast -->
                             <div
                                 id="status"
-                                class="max-w-xs absolute right-4 translate-x-full duration-300 ease-in-out bg-white border border-gray-200 rounded-xl shadow-lg"
+                                class="max-w-xs absolute -right-96 transition-[right] duration-300 ease-in-out bg-white border border-gray-200 rounded-xl shadow-lg"
                                 role="alert"
                                 tabindex="-1"
                                 aria-labelledby="hs-toast-success-example-label"
@@ -400,12 +400,14 @@
                 })
                     .then(async (response) => {
                         let json = await response.json();
+                        // result.classList.add("translate-x-full");
                         if (response.status == 200) {
                             // result.classList.add("text-green-500");
                             // result.innerHTML = json.message;
                             result.innerHTML = messageSended;
                             result.offsetHeight;
-                            result.classList.remove("translate-x-full");
+                            result.classList.remove("-right-96");
+                            result.classList.add("right-4");
                         } else {
                             console.log(response);
                             result.classList.add("text-red-500");
@@ -420,6 +422,8 @@
                         form.reset();
                         form.classList.remove("was-validated");
                         setTimeout(() => {
+                            result.classList.remove("right-4");
+                            result.classList.add("-right-96");
                             result.style.display = "none";
                         }, 5000);
                     });
